@@ -6,9 +6,9 @@ from math import ceil
 
 import neovim
 from dotenv import load_dotenv
-from revChatGPT.revChatGPT import Chatbot
+from revChatGPT.ChatGPT import Chatbot
 
-CONFIG_PATH = '~/.chatgpt-nvim.json'
+CONFIG_PATH = '~/.config/nvim/.chatgpt-nvim.json'
 DEFAULT_CONFIG = {'authorization': '', 'session_token': ''}
 
 CHAT_GPT = r'''
@@ -294,7 +294,7 @@ class Plugin:
     self.editor.chat.close()
 
   @neovim.command(
-    'ChatGPT',
+    'ChatGPTQ',
     nargs='*',
   )
   def chat(self, args):
